@@ -1,0 +1,22 @@
+{{ define "main" }}
+    <main class="projects">
+        <h1>{{ .Title }}</h1>
+
+        {{ if .Content }}
+            <div class="content">{{ .Content }}</div>
+        {{ end }}
+
+        <ul class="projects-list">
+            {{ range .Pages }}
+                <li class="project-item">
+                    <a href="{{.Permalink}}" class="project-item-inner">
+                        {{ if .Params.Cover }}
+                            <div class="project-image" style="background-image: url(&quot;{{.Params.Cover}}&quot;)"></div>
+                        {{ end }}
+                        <div class="project-title">{{.Title}}</div>
+                    </a>
+                </li>
+            {{ end }}
+        </ul>
+    </main>
+{{ end }}

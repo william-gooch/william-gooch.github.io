@@ -1,0 +1,22 @@
+baseURL = 'https://woochy.dev/'
+languageCode = 'en-gb'
+title = 'William Gooch'
+theme = ['hugo-theme-hello-friend-ng']
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
+
+[params]
+homeSubtitle = '<Come up with a good subtitle>'
+
+[params.logo]
+logoText = "william gooch"
+
+[[menu.main]]
+identifier = "projects"
+name = "Projects"
+url = "/projects"
+
+[markup.goldmark.renderer]
+unsafe = true
